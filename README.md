@@ -1,50 +1,72 @@
-# Welcome to your Expo app 👋
+# Inkreo App Frontend
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Table of Contents
 
-## Get started
+1. [👇🏾 Introduction](#-introduction)
+2. [✍🏾 Getting Started](#-getting-started)
+3. [✨ Features](#-features)
+4. [⚙️ Technical Stack](#-technical-stack)
+5. [🧑🏾‍💻 Contributing](#-contributing)
+6. [🤝🏾 Code of Conduct](#-code-of-conduct)
+7. [🗒️ License](#-license)
 
-1. Install dependencies
+## 👇🏾 Introduction
 
-   ```bash
+Inkreo is a cutting-edge document editing platform, similar to MS Word but enhanced with AI-powered assistance. This repository contains the React Native frontend code for the Inkreo mobile application.
+
+## ✍🏾 Getting Started
+
+To set up the project locally, follow these steps:
+
+1. Clone the repository:  
+   ```sh
+   git clone https://github.com/your-org/inkreo-frontend.git
+   ```
+2. Navigate into the project directory:
+   ```sh
+   cd inkreo-frontend
+   ```
+3. Install dependencies:
+   ```sh
    npm install
    ```
-
-2. Start the app
-
-   ```bash
-    npx expo start
+   or
+   ```sh
+   yarn install
+   ```
+4. Start the development server:
+   ```sh
+   npx ex start
+   ```
+   or
+   ```sh
+   yarn start
    ```
 
-In the output, you'll find options to open the app in a
+## ✨ Features
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- AI-powered document editing with real-time suggestions
+- Seamless synchronization across devices
+- Rich-text editing capabilities
+- Cloud storage integration for document management
+- Intuitive user interface with dark/light mode support
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## ⚙️ Technical Stack
 
-## Get a fresh project
+- React Native
+- JavaScript
+- Axios
+- TailwindCSS
+- Expo
 
-When you're ready, run:
+## 🧑🏾‍💻 Contributing
 
-```bash
-npm run reset-project
-```
+We welcome contributions! Please read our [Contribution Guidelines](./CONTRIBUTING.md) to understand how to get involved. Feel free to open issues or submit pull requests.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 🤝🏾 Code of Conduct
 
-## Learn more
+We are committed to fostering an inclusive and welcoming community. Please read our [Code of Conduct](./CODE_OF_CONDUCT.md) for guidelines on expected behavior.
 
-To learn more about developing your project with Expo, look at the following resources:
+## 🗒️ License
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Inkreo is licensed under the [MIT License](./LICENSE).
