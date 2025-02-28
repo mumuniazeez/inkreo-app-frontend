@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: 25, // Rounded corners
     paddingHorizontal: 15,
-    paddingVertical: 8,
+    paddingVertical: 2,
     margin: 10,
     shadowColor: '#000', // Shadow effect
     shadowOffset: { width: 0, height: 2 },
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 5, // For Android shadow
     justifyContent: 'space-between',
-    backgroundColor: '#E8E9EB',
+    backgroundColor: '#F1F1F1',
   },
   searchIcon: {
     marginRight: 10, // Spacing between icon and input
@@ -39,7 +39,6 @@ const styles = StyleSheet.create({
     flex: 1,
     fontSize: 16,
     color: '#333',
-    gap: 10,
   },
     userIcon: {
         width: 40,
