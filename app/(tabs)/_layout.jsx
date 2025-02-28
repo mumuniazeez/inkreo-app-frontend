@@ -1,28 +1,28 @@
-import { Tabs, useNavigation } from "expo-router";
+import { Tabs, useRouter, } from "expo-router";
 import { Foundation, MaterialCommunityIcons, Octicons } from "@expo/vector-icons";
-import { FilesFilledIcon, FilesIcon, TemplatesIcon, ToolsIcon } from './../../utils/iconTabs';
-
-
+import { FilesFilledIcon, FilesIcon, TemplatesFilledIcon, TemplatesIcon, ToolsFilledIcon, ToolsIcon } from './../../utils/iconTabs';
+import { TouchableOpacity } from "react-native";
 
 
 export default function TabLayout({ children }) {
-  const navigation = useNavigation();
-    return (
-        <Tabs
-        screenOptions={{
-          tabBarActiveTintColor: '#E94560',
-          tabBarShowLabel: true,
-          tabBarLabelStyle: { fontSize: 12, color: '#E94560' },
-          headerLeft: () =>
+  const router = useRouter();
+  return (
+    <Tabs
+      screenOptions={{
+        tabBarActiveTintColor: '#E94560',
+        tabBarShowLabel: true,
+        tabBarLabelStyle: { fontSize: 12, color: '#E94560' },
+        headerLeft: () =>
+          <TouchableOpacity onPress={() => router.push("/")}>
             <MaterialCommunityIcons
               name="chevron-left"
               size={35}
               color="black"
               style={{ paddingLeft: 10, paddingRight: "30%" }}
-              onPress={() => navigation.goBack()}
             />
-        }}
-        >
+          </TouchableOpacity>,
+      }}
+    >
       <Tabs.Screen
         name="index"
         options={{
@@ -35,14 +35,14 @@ export default function TabLayout({ children }) {
         name="Files"
         options={{
           title: "Files",
-          tabBarIcon: ({ focused }) => focused ?  <FilesFilledIcon /> : <FilesIcon /> 
+          tabBarIcon: ({ focused }) => focused ? <FilesFilledIcon /> : <FilesIcon />
         }}
       />
       <Tabs.Screen
         name="Templates"
         options={{
           title: 'Templates',
-          tabBarIcon: () => <TemplatesIcon />,
+          tabBarIcon: ({ focused }) => focused ? <TemplatesFilledIcon /> : <TemplatesIcon />,
           headerShown: false,
         }}
       />
@@ -50,7 +50,7 @@ export default function TabLayout({ children }) {
         name="Tools"
         options={{
           headerShown: false,
-          tabBarIcon: () => <ToolsIcon />
+          tabBarIcon: ({ focused }) => focused ? <ToolsFilledIcon /> : <ToolsIcon />
         }}
       />
     </Tabs>

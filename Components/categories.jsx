@@ -70,7 +70,6 @@ const styles = StyleSheet.create({
   categoryText: {
     marginTop: 8,
     fontSize: 14,
-    fontWeight: 'bold',
     color: '#555555',
     textAlign: 'center',
   },
