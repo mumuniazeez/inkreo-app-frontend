@@ -39,7 +39,7 @@ const Files = () => {
       </View>
 
       {/* Conditionally Render Grid or List */}
-      <View style={{ marginBottom: "76%" }}>
+      <View style={{ marginBottom: "68%" }}>
         {viewMode === 'grid' ? <FilesGrid /> : <FileList />}
       </View>
     </View>

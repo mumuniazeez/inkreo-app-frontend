@@ -1,29 +1,30 @@
 import React from 'react';
 import { View, Text, ScrollView, TouchableOpacity, StyleSheet } from 'react-native';
-import { Ionicons, MaterialCommunityIcons, MaterialIcons, FontAwesome, FontAwesome6 } from '@expo/vector-icons'; // Import the necessary icons
+import { BlogPostIcon, ProposalIcon, ResumeIcon, ScriptIcon, SearchIcon } from '@utils/iconTabs';
+import { Ionicons } from '@expo/vector-icons';
 
 // Categories Data
 const categories = [
-  { name: 'Blog Post', icon: 'file-pen', iconName: 'FontAwesome6', bgColor: '#6A5ACD' },
-  { name: 'Research', icon: 'search', iconName: 'Ionicons', bgColor: '#FF6347' },
-  { name: 'Proposal', icon: 'file-text', iconName: 'FontAwesome', bgColor: '#20B2AA' },
-  { name: 'Script', icon: 'movie-open', iconName: 'MaterialCommunityIcons', bgColor: '#FF4500' },
-  { name: 'Resume', icon: 'description', iconName: 'MaterialIcons', bgColor: '#4682B4' },
+  { name: 'Blog Post', icon: 'file-pen', iconName: 'BlogPostIcon', bgColor: '#6A5ACD' },
+  { name: 'Research', icon: 'search', iconName: 'Ionicon', bgColor: '#FF6347' },
+  { name: 'Proposal', icon: 'file-text', iconName: 'ProposalIcon', bgColor: '#20B2AA' },
+  { name: 'Script', icon: 'movie-open', iconName: 'ScriptIcon', bgColor: '#FF4500' },
+  { name: 'Resume', icon: 'description', iconName: 'ResumeIcon', bgColor: '#4682B4' },
 ];
 
 // Function to return the right icon component
 const getIconComponent = (iconName, icon, size, color) => {
   switch (iconName) {
-    case 'FontAwesome6':
-      return <FontAwesome6 name={icon} size={size} color={color} />;
-      case 'Ionicons':
+    case 'BlogPostIcon':
+      return <BlogPostIcon name={icon} size={size} color={color} />;
+      case 'Ionicon':
       return <Ionicons name={icon} size={size} color={color} />;
-    case 'MaterialCommunityIcons':
-      return <MaterialCommunityIcons name={icon} size={size} color={color} />;
-    case 'MaterialIcons':
-      return <MaterialIcons name={icon} size={size} color={color} />;
-    case 'FontAwesome':
-      return <FontAwesome name={icon} size={size} color={color} />;
+    case 'ProposalIcon':
+      return <ProposalIcon name={icon} size={size} color={color} />;
+    case 'ScriptIcon':
+      return <ScriptIcon name={icon} size={size} color={color} />;
+    case 'ResumeIcon':
+      return <ResumeIcon name={icon} size={size} color={color} />;
     default:
       return null; // Handle if no matching icon is found
   }

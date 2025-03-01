@@ -9,10 +9,12 @@ const Home = () => {
   return (
     <View style={{ flex: 1, backgroundColor: '#fff' }}>
       <ScrollView>
+        <View style={{paddingHorizontal: 10,}}>
         <SearchBar />
+        </View>
 
         <View style={styles.bannerContainer}>
-          <Image source={require('./../../assets/images/homeTheme.png')}
+          <Image source={require('../../../assets/images/homeTheme.png')}
             style={styles.bannerImage}
           />
 
@@ -22,24 +24,27 @@ const Home = () => {
 
         <View style={styles.recentContainer}>
           <Text style={styles.recentContainerText}>Recent</Text>
-          <TouchableOpacity onPress={() => router.push("/Files")}>
-            <Entypo name="chevron-right" size={26} color="#555555" />
+          <TouchableOpacity onPress={() => router.push("/Files")} style={{ flexDirection: 'row', alignItems: 'center' }}>
+          <Text style={{ color: "#808080DE" }} >View All</Text>
+            <Entypo name="chevron-right" size={26} color="#808080DE" />
           </TouchableOpacity>
         </View>
         <RecentDocuments />
 
         <View style={styles.recentContainer}>
           <Text style={styles.recentContainerText}>Blog Post</Text>
-          <TouchableOpacity>
-            <Entypo name="chevron-right" size={26} color="#555555" />
+          <TouchableOpacity style={{ flexDirection: 'row', alignItems: 'center' }}>
+          <Text style={{ color: "#808080DE" }} >View All</Text>
+            <Entypo name="chevron-right" size={26} color="#808080DE" />
           </TouchableOpacity>
         </View>
         <BlogPost />
 
         <View style={styles.recentContainer}>
           <Text style={styles.recentContainerText}>Proposal</Text>
-          <TouchableOpacity>
-            <Entypo name="chevron-right" size={26} color="#555555" />
+          <TouchableOpacity style={{ flexDirection: 'row', alignItems: 'center' }}>
+            <Text style={{ color: "#808080DE" }} >View All</Text>
+            <Entypo name="chevron-right" size={26} color="#808080DE" />
           </TouchableOpacity>
         </View>
         <Proposal />
@@ -80,8 +85,8 @@ const styles = StyleSheet.create({
   createButton: {
     flexDirection: 'row',
     position: 'absolute',
-    bottom: 20,
-    right: 15,
+    bottom: 40,
+    right: 20,
     backgroundColor: '#E94560', // Pink background
     width: 90,
     height: 50,

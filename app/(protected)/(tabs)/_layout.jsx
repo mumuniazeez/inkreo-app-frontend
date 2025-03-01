@@ -1,6 +1,6 @@
 import { Tabs, useRouter, } from "expo-router";
 import { Foundation, MaterialCommunityIcons, Octicons } from "@expo/vector-icons";
-import { FilesFilledIcon, FilesIcon, TemplatesFilledIcon, TemplatesIcon, ToolsFilledIcon, ToolsIcon } from './../../utils/iconTabs';
+import { FilesFilledIcon, FilesIcon, TemplatesFilledIcon, TemplatesIcon, ToolsFilledIcon, ToolsIcon } from '../../../utils/iconTabs';
 import { TouchableOpacity } from "react-native";
 
 
@@ -12,6 +12,7 @@ export default function TabLayout({ children }) {
         tabBarActiveTintColor: '#E94560',
         tabBarShowLabel: true,
         tabBarLabelStyle: { fontSize: 12, color: '#E94560' },
+        tabBarStyle: { backgroundColor: 'white', height: 68 },
         headerLeft: () =>
           <TouchableOpacity onPress={() => router.push("/")}>
             <MaterialCommunityIcons
