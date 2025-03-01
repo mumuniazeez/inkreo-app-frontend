@@ -1,14 +1,14 @@
 import React from 'react';
 import { View, Text, ScrollView, TouchableOpacity, StyleSheet } from 'react-native';
-import { Ionicons, MaterialCommunityIcons, AntDesign, FontAwesome, FontAwesome6 } from '@expo/vector-icons'; // Import the necessary icons
+import { Ionicons, MaterialCommunityIcons, MaterialIcons, FontAwesome, FontAwesome6 } from '@expo/vector-icons'; // Import the necessary icons
 
 // Categories Data
 const categories = [
-  { name: 'Blog Post', icon: 'file-pen', iconName: 'FontAwesome6', bgColor: '#8052F2' },
-  { name: 'Research', icon: 'search', iconName: 'Ionicons', bgColor: '#FF7143' },
-  { name: 'Proposal', icon: 'file-text', iconName: 'FontAwesome', bgColor: '#00BFA5' },
-  { name: 'Script', icon: 'movie-open-star', iconName: 'MaterialCommunityIcons', bgColor: '#FF5722' },
-  { name: 'Resume', icon: 'filetext1', iconName: 'AntDesign', bgColor: '#0078FF' },
+  { name: 'Blog Post', icon: 'file-pen', iconName: 'FontAwesome6', bgColor: '#6A5ACD' },
+  { name: 'Research', icon: 'search', iconName: 'Ionicons', bgColor: '#FF6347' },
+  { name: 'Proposal', icon: 'file-text', iconName: 'FontAwesome', bgColor: '#20B2AA' },
+  { name: 'Script', icon: 'movie-open', iconName: 'MaterialCommunityIcons', bgColor: '#FF4500' },
+  { name: 'Resume', icon: 'description', iconName: 'MaterialIcons', bgColor: '#4682B4' },
 ];
 
 // Function to return the right icon component
@@ -20,8 +20,8 @@ const getIconComponent = (iconName, icon, size, color) => {
       return <Ionicons name={icon} size={size} color={color} />;
     case 'MaterialCommunityIcons':
       return <MaterialCommunityIcons name={icon} size={size} color={color} />;
-    case 'AntDesign':
-      return <AntDesign name={icon} size={size} color={color} />;
+    case 'MaterialIcons':
+      return <MaterialIcons name={icon} size={size} color={color} />;
     case 'FontAwesome':
       return <FontAwesome name={icon} size={size} color={color} />;
     default:
