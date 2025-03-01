@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 import { Slot } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
@@ -86,4 +87,17 @@ export default function RootLayout() {
   }
 
   return <Slot />; // Ensures a default view is rendered
+=======
+import { Slot } from "expo-router";
+import {StatusBar} from "expo-status-bar"
+import "@styles/global.css"
+
+export default function RootLayout() {
+  return (
+    <>
+    <Slot />
+    <StatusBar style="dark"/>
+    </>
+  )
+>>>>>>> upstream/main
 }
