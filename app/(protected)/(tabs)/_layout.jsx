@@ -1,19 +1,29 @@
-import { Tabs, useRouter, } from "expo-router";
-import { Foundation, MaterialCommunityIcons, Octicons } from "@expo/vector-icons";
-import { FilesFilledIcon, FilesIcon, TemplatesFilledIcon, TemplatesIcon, ToolsFilledIcon, ToolsIcon } from '../../../utils/iconTabs';
+import { Tabs, useRouter } from "expo-router";
+import {
+  Foundation,
+  MaterialCommunityIcons,
+  Octicons,
+} from "@expo/vector-icons";
+import {
+  FilesFilledIcon,
+  FilesIcon,
+  TemplatesFilledIcon,
+  TemplatesIcon,
+  ToolsFilledIcon,
+  ToolsIcon,
+} from "../../../utils/iconTabs";
 import { TouchableOpacity } from "react-native";
-
 
 export default function TabLayout({ children }) {
   const router = useRouter();
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: '#E94560',
+        tabBarActiveTintColor: "#E94560",
         tabBarShowLabel: true,
-        tabBarLabelStyle: { fontSize: 12, color: '#E94560' },
-        tabBarStyle: { backgroundColor: 'white', height: 68 },
-        headerLeft: () =>
+        tabBarLabelStyle: { fontSize: 12, color: "#E94560" },
+        tabBarStyle: { backgroundColor: "white", height: 68 },
+        headerLeft: () => (
           <TouchableOpacity onPress={() => router.push("/")}>
             <MaterialCommunityIcons
               name="chevron-left"
@@ -21,7 +31,9 @@ export default function TabLayout({ children }) {
               color="black"
               style={{ paddingLeft: 10, paddingRight: "30%" }}
             />
-          </TouchableOpacity>,
+          </TouchableOpacity>
+        ),
+        tabBarHideOnKeyboard: true,
       }}
     >
       <Tabs.Screen
@@ -29,21 +41,29 @@ export default function TabLayout({ children }) {
         options={{
           title: "Home",
           headerShown: false,
-          tabBarIcon: ({ focused }) => focused ? <Foundation name="home" size={28} color="#E94560" /> : <Octicons name="home" size={23} color="#E94560" />,
+          tabBarIcon: ({ focused }) =>
+            focused ? (
+              <Foundation name="home" size={28} color="#E94560" />
+            ) : (
+              <Octicons name="home" size={23} color="#E94560" />
+            ),
         }}
       />
       <Tabs.Screen
         name="Files"
         options={{
           title: "Files",
-          tabBarIcon: ({ focused }) => focused ? <FilesFilledIcon /> : <FilesIcon />
+          tabBarIcon: ({ focused }) =>
+            focused ? <FilesFilledIcon /> : <FilesIcon />,
+          headerShown: false,
         }}
       />
       <Tabs.Screen
         name="Templates"
         options={{
-          title: 'Templates',
-          tabBarIcon: ({ focused }) => focused ? <TemplatesFilledIcon /> : <TemplatesIcon />,
+          title: "Templates",
+          tabBarIcon: ({ focused }) =>
+            focused ? <TemplatesFilledIcon /> : <TemplatesIcon />,
           headerShown: false,
         }}
       />
@@ -51,9 +71,10 @@ export default function TabLayout({ children }) {
         name="Tools"
         options={{
           headerShown: false,
-          tabBarIcon: ({ focused }) => focused ? <ToolsFilledIcon /> : <ToolsIcon />
+          tabBarIcon: ({ focused }) =>
+            focused ? <ToolsFilledIcon /> : <ToolsIcon />,
         }}
       />
     </Tabs>
-  )
+  );
 }

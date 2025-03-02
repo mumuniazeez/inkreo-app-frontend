@@ -12,6 +12,7 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.inkreo.frontend",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/logo-removebg-preview.png",
         "backgroundColor": "#5924AA"

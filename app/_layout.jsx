@@ -1,10 +1,11 @@
-import { useEffect, useState } from 'react';
-import { Slot } from 'expo-router';
-import * as SplashScreen from 'expo-splash-screen';
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import OnboardingScreen from './onboarding/onboarding_screen';
-import LoginScreen from './auth/sign_in_screen';
-import RegisterScreen from './auth/register_screen';
+import "@styles/global.css";
+import { useEffect, useState } from "react";
+import { Slot } from "expo-router";
+import * as SplashScreen from "expo-splash-screen";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import OnboardingScreen from "./onboarding/onboarding_screen";
+import LoginScreen from "./auth/sign_in_screen";
+import RegisterScreen from "./auth/register_screen";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -19,8 +20,8 @@ export default function RootLayout() {
     async function initializeApp() {
       try {
         // Force onboarding every time for development
-        setShowOnboarding(true);  
-  
+        setShowOnboarding(false);
+
         // 🚀 Later, enable this to respect AsyncStorage
         // const hasSeenOnboarding = await AsyncStorage.getItem('hasSeenOnboarding');
         // if (!hasSeenOnboarding) {
@@ -28,19 +29,17 @@ export default function RootLayout() {
         // } else {
         //   setShowLogin(true);
         // }
-  
       } catch (e) {
-        console.error('Error checking app state', e);
+        console.error("Error checking app state", e);
       } finally {
         setIsMounted(true);
         await SplashScreen.hideAsync();
         setIsLoading(false);
       }
     }
-  
+
     initializeApp();
   }, []);
-  
 
   if (isLoading || !isMounted) return null;
 
@@ -48,7 +47,7 @@ export default function RootLayout() {
     return (
       <OnboardingScreen
         onFinish={async () => {
-          await AsyncStorage.setItem('hasSeenOnboarding', 'true');
+          await AsyncStorage.setItem("hasSeenOnboarding", "true");
           setShowOnboarding(false);
           setShowLogin(true);
         }}
