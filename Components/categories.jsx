@@ -2,11 +2,12 @@ import React from 'react';
 import { View, Text, ScrollView, TouchableOpacity, StyleSheet } from 'react-native';
 import { BlogPostIcon, ProposalIcon, ResumeIcon, ScriptIcon, SearchIcon } from '@utils/iconTabs';
 import { Ionicons } from '@expo/vector-icons';
+import Research from "./../assets/images/research";
 
 // Categories Data
 const categories = [
   { name: 'Blog Post', icon: 'file-pen', iconName: 'BlogPostIcon', bgColor: '#6A5ACD' },
-  { name: 'Research', icon: 'search', iconName: 'Ionicon', bgColor: '#FF6347' },
+  { name: 'Research', icon: 'search', iconName: 'Research', bgColor: '#FF6347' },
   { name: 'Proposal', icon: 'file-text', iconName: 'ProposalIcon', bgColor: '#20B2AA' },
   { name: 'Script', icon: 'movie-open', iconName: 'ScriptIcon', bgColor: '#FF4500' },
   { name: 'Resume', icon: 'description', iconName: 'ResumeIcon', bgColor: '#4682B4' },
@@ -17,8 +18,8 @@ const getIconComponent = (iconName, icon, size, color) => {
   switch (iconName) {
     case 'BlogPostIcon':
       return <BlogPostIcon name={icon} size={size} color={color} />;
-      case 'Ionicon':
-      return <Ionicons name={icon} size={size} color={color} />;
+      case 'Research':
+      return <Research name={icon} size={size} color={color} />;
     case 'ProposalIcon':
       return <ProposalIcon name={icon} size={size} color={color} />;
     case 'ScriptIcon':

@@ -45,7 +45,6 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
     shadowRadius: 3,
-    elevation: 5,  // Add shadow effect for Android
   },
   image: {
     width: 120,
